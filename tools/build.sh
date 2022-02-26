@@ -7,6 +7,4 @@ convert -size 32 images/original.png images/icon.png
 
 npx web-ext build
 
-for file in web-ext-artifacts/*.zip; do
-  cp $file ${file%.zip}.crx
-done
+chromium --pack-extension .
