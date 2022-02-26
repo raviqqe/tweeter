@@ -23,11 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npx web-ext build
-      - run: |
-          for file in web-ext-artifacts/*.zip; do
-            cp $file ${file%.zip}.crx
-          done
+      - run: tools/build.sh
       - uses: softprops/action-gh-release@v1
         if: needs.tag_check.outputs.should_release
         with:

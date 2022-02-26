@@ -6,3 +6,7 @@ curl -fsSL https://dotown.maeda-design-room.net/wp-content/uploads/2022/01/thing
 convert -size 32 images/original.png images/icon.png
 
 npx web-ext build
+
+for file in web-ext-artifacts/*.zip; do
+  cp $file ${file%.zip}.crx
+done
