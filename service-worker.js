@@ -1,3 +1,3 @@
-browser.browserAction.onClicked(() => {
-  browser.windows.getCurrent().open("https://twitter.com", "_blank");
+chrome.browserAction.onClicked(() => {
+  chrome.windows.getCurrent().open("https://twitter.com", "_blank");
 });
