@@ -1,0 +1,34 @@
+name: release
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  tag_check:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ env.version }}
+      should_release: ${{ env.should_release }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo version=$(jq -r .version manifest.json) >> $GITHUB_ENV
+      - run: |
+          git fetch --prune --unshallow --tags
+
+          if [ ${{ github.ref }} = 'refs/heads/main' ] && ! git tag | grep v$version; then
+            echo should_release=true >> $GITHUB_ENV
+          fi
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: tools/build.sh
+      - uses: softprops/action-gh-release@v1
+        if: needs.tag_check.outputs.should_release
+        with:
+          tag_name: v${{ needs.tag_check.outputs.version }}
+          files: web-ext-artifacts/*
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
