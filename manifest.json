@@ -4,6 +4,9 @@
   "version": "0.1",
   "manifest_version": 3,
   "permissions": [],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
   "action": {
     "default_title": "Tweeter",
     "default_icon": "icon.svg"
