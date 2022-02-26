@@ -5,11 +5,11 @@ on:
       - main
   pull_request:
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npx web-ext lint
+      - run: npx web-ext build
   spell_check:
     runs-on: ubuntu-latest
     steps:
