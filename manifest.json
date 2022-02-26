@@ -5,7 +5,7 @@
   "icons": {
     "32": "/images/icon.png"
   },
-  "version": "0.1",
+  "version": "0.1.1",
   "permissions": ["tabs"],
   "background": {
     "service_worker": "service-worker.js"
