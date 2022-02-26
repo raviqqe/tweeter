@@ -1,0 +1,11 @@
+{
+  "name": "Tweeter",
+  "description": "A browser extension to tweet the current page.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": [],
+  "action": {
+    "default_title": "Tweeter",
+    "default_icon": "icon.svg"
+  }
+}
