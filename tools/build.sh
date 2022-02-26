@@ -5,8 +5,4 @@ set -e
 curl -fsSL https://dotown.maeda-design-room.net/wp-content/uploads/2022/01/thing_chick_01.png >images/original.png
 convert -size 32 images/original.png images/icon.png
 
-zip extension.zip \
-  images/* \
-  manifest.json \
-  README.md \
-  service-worker.js
+npx web-ext build
