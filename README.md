@@ -1,4 +1,4 @@
-# Tweeter browser extension
+# Tweeter
 
 A browser extension to tweet the current page.
 
