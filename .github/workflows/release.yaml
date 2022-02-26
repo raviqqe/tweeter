@@ -12,7 +12,7 @@ jobs:
       should_release: ${{ env.should_release }}
     steps:
       - uses: actions/checkout@v2
-      - run: echo version=$(jq -r .version manifest.json) >> $GITHUB_ENV
+      - run: echo version=$(jq -r .version manifest.template.json) >> $GITHUB_ENV
       - run: |
           git fetch --prune --unshallow --tags
 
