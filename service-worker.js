@@ -3,6 +3,6 @@ chrome.action.onClicked.addListener(async () => {
 
   chrome.tabs.create({
     active: true,
-    url: "https://twitter.com/intent/tweet?url=" = tab.url,
+    url: "https://twitter.com/intent/tweet?url=" + tab.url,
   });
 });
