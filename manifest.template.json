@@ -2,9 +2,7 @@
   "manifest_version": 3,
   "name": "Tweeter",
   "description": "A browser extension to tweet the current page.",
-  "icons": {
-    "32": "/images/icon.png"
-  },
+  "icons": {},
   "version": "0.1.0",
   "permissions": ["tabs"],
   "background": {
@@ -12,6 +10,6 @@
   },
   "action": {
     "default_title": "Tweeter",
-    "default_icon": "/images/icon.png"
+    "default_icon": {}
   }
 }
