@@ -1,8 +1,9 @@
 {
+  "manifest_version": 3,
   "name": "Tweeter",
   "description": "A browser extension to tweet the current page.",
+  "icons": {},
   "version": "0.1",
-  "manifest_version": 3,
   "permissions": [],
   "background": {
     "service_worker": "service-worker.js"
