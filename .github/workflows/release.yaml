@@ -20,12 +20,14 @@ jobs:
             echo should_release=true >> $GITHUB_ENV
           fi
   release:
+    needs:
+      - tag_check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: tools/build.sh
       - uses: softprops/action-gh-release@v1
-        if: needs.tag_check.outputs.should_release == 'true'
+        if: needs.tag_check.outputs.should_release
         with:
           tag_name: v${{ needs.tag_check.outputs.version }}
           files: web-ext-artifacts/*
