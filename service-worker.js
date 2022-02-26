@@ -4,7 +4,9 @@ chrome.action.onClicked.addListener(async () => {
     currentWindow: true,
   });
 
-  if (!tab) { return}
+  if (!tab) {
+    return;
+  }
 
   chrome.tabs.create({
     active: true,
