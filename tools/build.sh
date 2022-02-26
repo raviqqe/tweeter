@@ -19,7 +19,3 @@ for size in 16 32 48 64 96 128; do
 done
 
 npx web-ext build --overwrite-dest
-
-for file in web-ext-artifacts/*.zip; do
-  cp $file ${file%.zip}.crx
-done
