@@ -2,8 +2,8 @@
 
 set -e
 
-curl -fsSL https://raviqqe.com/icon.svg > images/icon.svg
-convert -size 32 images/icon.svg images/icon.png
+curl -fsSL https://dotown.maeda-design-room.net/wp-content/uploads/2022/01/thing_chick_01.png >images/original.png
+convert -size 32 images/original.png images/icon.png
 
 zip extension.zip \
   images/* \
