@@ -1,6 +1,8 @@
-chrome.action.onClicked.addListener(() => {
+chrome.action.onClicked.addListener(async () => {
+  const tab = await chrome.tabs.getCurrent();
+
   chrome.tabs.create({
     active: true,
-    url: "https://twitter.com",
+    url: "https://twitter.com/intent/tweet?url=" = tab.url,
   });
 });
