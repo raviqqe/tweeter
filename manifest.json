@@ -3,15 +3,15 @@
   "name": "Tweeter",
   "description": "A browser extension to tweet the current page.",
   "icons": {
-    "32": "/images/icon.svg"
+    "32": "/images/icon.png"
   },
   "version": "0.1",
-  "permissions": [],
+  "permissions": ["tabs"],
   "background": {
     "service_worker": "service-worker.js"
   },
   "action": {
     "default_title": "Tweeter",
-    "default_icon": "/images/icon.svg"
+    "default_icon": "/images/icon.png"
   }
 }
