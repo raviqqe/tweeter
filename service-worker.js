@@ -1,4 +1,6 @@
 chrome.action.onClicked.addListener(() => {
-  chrome.tabs.create({ 
-    active: true, url: "https://twitter.com" });
+  chrome.tabs.create({
+    active: true,
+    url: "https://twitter.com",
+  });
 });
