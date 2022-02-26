@@ -16,7 +16,12 @@ jobs:
       - run: |
           git fetch --prune --unshallow --tags
 
-          if [ ${{ github.ref }} = refs/heads/main ] && ! git tag | grep v$version; then
+          [ refs/heads/main = refs/heads/main ] && ! git tag | grep v$version
+          echo status=$?
+          echo version="$version"
+
+          if [ refs/heads/main = refs/heads/main ] && ! git tag | grep v$version; then
+            echo tomato
             echo should_release=true >> $GITHUB_ENV
           fi
   release:
