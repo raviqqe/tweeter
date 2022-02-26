@@ -1,3 +1,4 @@
 chrome.action.onClicked.addListener(() => {
-  chrome.windows.getCurrent().open("https://twitter.com", "_blank");
+  chrome.tabs.create({ 
+    active: true, url: "https://twitter.com" });
 });
