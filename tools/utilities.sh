@@ -1,1 +1,1 @@
-web_ext_options='-i *.template.json tmp/* tools/*'
+web_ext_options='-i *.template.json node_modules tmp tools'

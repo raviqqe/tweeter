@@ -3,10 +3,10 @@
   "name": "Tweeter",
   "description": "A browser extension to tweet the current page.",
   "icons": {},
-  "version": "0.2.2",
+  "version": "0.2.3",
   "permissions": ["tabs"],
   "background": {
-    "scripts": ["service-worker.js"]
+    "scripts": ["src/polyfill.js", "src/service-worker.js"]
   },
   "browser_action": {
     "default_title": "Tweeter",
