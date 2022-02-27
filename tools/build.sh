@@ -18,4 +18,4 @@ for size in 16 32 48 64 96 128; do
   done
 done
 
-npx web-ext build --overwrite-dest -i {tmp,tools}/* 
+npx web-ext build --overwrite-dest -i tmp/* -i tools/*
