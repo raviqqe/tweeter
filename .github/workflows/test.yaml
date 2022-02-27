@@ -5,15 +5,11 @@ on:
       - main
   pull_request:
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: tools/build.sh
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - run: tools/lint.sh
   spell_check:
     runs-on: ubuntu-latest
