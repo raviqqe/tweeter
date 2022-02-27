@@ -1,4 +1,4 @@
-chrome.action.onClicked.addListener(async () => {
+chrome.browserAction.onClicked.addListener(async () => {
   const [tab] = await chrome.tabs.query({
     active: true,
     currentWindow: true,
