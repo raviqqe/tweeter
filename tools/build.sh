@@ -18,7 +18,7 @@ for size in 16 32 48 64 96 128; do
     images/original.png \
     $image
 
-  for key in .icons .action.default_icon; do
+  for key in .icons .browserAction.default_icon; do
     jq "$key[\"$size\"] = \"/$image\"" manifest.json >tmp/manifest.json
     cp tmp/manifest.json manifest.json
   done
