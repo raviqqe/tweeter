@@ -1,5 +1,5 @@
-chrome.browserAction.onClicked.addListener(async () => {
-  const [tab] = await chrome.tabs.query({
+browser.browserAction.onClicked.addListener(async () => {
+  const [tab] = await browser.tabs.query({
     active: true,
     currentWindow: true,
   });
@@ -8,7 +8,7 @@ chrome.browserAction.onClicked.addListener(async () => {
     return;
   }
 
-  chrome.tabs.create({
+  browser.tabs.create({
     active: true,
     url: "https://twitter.com/intent/tweet?url=" + tab.url,
   });
