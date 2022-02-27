@@ -10,7 +10,7 @@ mkdir -p tmp
 for size in 16 32 48 64 96 128; do
   image=images/icon-$size.png
 
-  convert -size $size images/original.png $image
+  convert -trim -resize ${size}x images/original.png $image
 
   for key in .icons .action.default_icon; do
     jq "$key[\"$size\"] = \"/$image\"" manifest.json >tmp/manifest.json
