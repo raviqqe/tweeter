@@ -2,6 +2,6 @@
   "name": "tweeter",
   "version": "0.0.0",
   "dependencies": {
-    "webextension-polyfill": "^0.8.0"
+    "webextension-polyfill": "^0.10.0"
   }
 }
