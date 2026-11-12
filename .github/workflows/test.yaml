@@ -8,13 +8,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.8.0
       - run: tools/build.sh
       - run: tools/lint.sh
   spell_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.8.0
       - uses: streetsidesoftware/cspell-action@main
         with:
           files: "**/*.{js,json,md,sh}"
